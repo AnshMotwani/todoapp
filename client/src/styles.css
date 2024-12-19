@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: rgb(19, 0, 27);
+    background-image: url("https://www.transparenttextures.com/patterns/black-paper.png");
+    color: white;
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+    isolation: isolate;
+}
+
+.Container{
+    max-width: 1200px;
+    margin: 0 auto;
+}   
+
+.Title{
+    text-align: center;
+    padding: 3rem;
+    font-size: 3rem;
+}
+
+.todos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.todo{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+
+    background-color: rgba(154, 154, 154, 0.5);
+    width: 50%;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+
+    &:hover {
+        background-color: rgba(154, 154, 154, 0.7);
+    }
+}
+
+.todo__status{
+    border: none;
+    padding: 0;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+        transform: scale(1.15)
+    }
+}
+
+.Form {
+    display: flex;
+    gap: 0.5rem;
+    width: 50%;
+    margin: 1rem auto;
+
+}
+
+.form__input {
+    flex: 1;
+    padding: 0.75rem 0.75rem;
+    border-radius: 0.5rem;
+    background-color: rgb(237, 237, 236);
+
+    &:focus,
+    &:hover {
+        background-color: rgb(190, 190, 190);;
+    }
+}
+
+.form__button{
+    border: none;
+    border-radius: 0.5rem;
+    background-color: antiquewhite;
+    cursor: pointer;
+    
+
+    &:hover {
+        background-color: rgb(171, 111, 197);;
+    }
+}
+
+.todo__status,
+.todo__delete {
+    /* Style both buttons similarly */
+    border: none;
+    background: rgb(255, 255, 255);
+    padding: 0.25rem 0.25rem;
+    /* Smaller padding */
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 30px;
+    /* Specific size for buttons */
+    height: 30px;
+}
+
+.todo__status:hover,
+.todo__delete:hover {
+    /* Hover effect for both buttons */
+    transform: scale(1.15);
+}
+
+.mutations {
+    display: flex;
+    gap: 0.5rem;
+}
